@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Restaurante Beira Rio — Santo Amaro do Sul, RS</title>
+<meta name="description" content="Comida caseira, peixes e ambiente acolhedor em Santo Amaro do Sul, General Câmara — RS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--g:#16302a;--g2:#1f3f37;--bone:#f1ebdd;--paper:#f7f3e9;--ink:#1d2622;--mute:#5a625b;--gold:#b0883f;--line:#d9d0ba;--river:#8fa8a0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121a17;--bone:#18231f;--ink:#ece6d6;--mute:#aeb5a9;--line:#2c3b35;--gold:#cfa957;color-scheme:dark}}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 "Hanken Grotesk",system-ui,sans-serif}
+h1,h2,h3{font-family:"Young Serif",Georgia,serif;font-weight:400;margin:0;line-height:1.05}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:110px 0}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem);max-width:15ch}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn{display:inline-block;padding:14px 26px;font-weight:600;text-decoration:none;border:1.5px solid var(--gold);font:600 1rem "Hanken Grotesk",sans-serif;cursor:pointer;transition:background .2s,color .2s;border-radius:999px}
+.btn.fill{background:var(--gold);color:#16210f}.btn.fill:hover{background:#c79d4e}
+.btn.line:hover{background:rgba(176,136,63,.16)}
+header{position:sticky;top:0;z-index:20;background:var(--g);color:#f1ebdd;padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Young Serif",serif;font-size:1.5rem;text-decoration:none}
+nav{display:flex;align-items:center;gap:28px}
+nav a{text-decoration:none;font-size:.95rem;opacity:.85}nav a:hover{opacity:1}
+nav a.btn{opacity:1;padding:8px 20px;color:#16210f}
+.burger{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:inherit;padding:7px 16px;font:inherit;cursor:pointer;border-radius:999px}
+@media(max-width:860px){.burger{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--g);flex-direction:column;align-items:flex-start;padding:14px 28px 26px;gap:16px}nav.open{display:flex}}
+/* hero */
+.hero{background:var(--g) center/cover;color:#f1ebdd;padding:0;position:relative;overflow:hidden;min-height:calc(100svh - 68px);display:flex;flex-direction:column}
+.hero.img::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,30,25,.88),rgba(14,30,25,.35))}
+.hero>*{position:relative}
+.river{position:absolute;left:0;top:34%;width:100%;height:240px;pointer-events:none}
+.river path{fill:none;stroke:var(--river);stroke-width:1.2;opacity:.5;stroke-dasharray:2400;stroke-dashoffset:2400;animation:flow 4.5s ease-out .2s forwards}
+.river path+path{stroke:var(--gold);opacity:.55;animation-delay:.6s}
+@keyframes flow{to{stroke-dashoffset:0}}
+.hero .top{flex:1;display:flex;flex-direction:column;justify-content:center;padding:70px 0 50px}
+.hero h1{font-size:clamp(3.1rem,9.4vw,8rem);letter-spacing:-.02em;max-width:11ch}
+.hero .row{display:flex;flex-wrap:wrap;gap:30px 60px;align-items:end;justify-content:space-between;margin-top:44px}
+.hero p{margin:0;max-width:44ch;color:#cdd6cc;font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.ledger{border-top:1px solid rgba(241,235,221,.22);display:grid;grid-template-columns:repeat(3,1fr)}
+.ledger div{padding:22px 0 26px 24px;border-left:1px solid rgba(241,235,221,.22);color:#cdd6cc;font-size:.95rem}
+.ledger div:first-child{border-left:0;padding-left:0}
+.ledger b{display:block;font:400 clamp(1.5rem,3vw,2.3rem) "Young Serif",serif;color:#e4c37d}
+@media(max-width:700px){.ledger{grid-template-columns:1fr}.ledger div{border-left:0;padding-left:0;border-top:1px solid rgba(241,235,221,.22)}.ledger div:first-child{border-top:0}}
+/* about */
+.about{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.about p{margin:0;font-size:1.3rem;line-height:1.6;max-width:36ch}
+.about .photo{margin-top:40px;aspect-ratio:16/10;background:center/cover}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:30px}section{padding:76px 0}}
+/* menu */
+.bg{background:var(--bone)}
+.menu{display:grid;grid-template-columns:5fr 7fr;gap:80px}
+.menu .side{position:sticky;top:110px;align-self:start}
+.menu .side p{color:var(--mute);margin:20px 0 28px;max-width:34ch}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:28px 0;border-top:1px solid var(--line)}
+.item:last-child{border-bottom:1px solid var(--line)}
+.item h3{font-size:1.8rem}
+.item p{grid-column:1;margin:0;color:var(--mute);max-width:44ch}
+.item .pr{grid-row:1;grid-column:2;align-self:center;font-weight:600;color:var(--gold);font-size:.95rem}
+.item img{grid-column:1/-1;width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:14px}
+.said{margin:34px 0 0;font:400 1.15rem/1.5 "Young Serif",serif;max-width:40ch}
+.said small{display:block;font:400 .9rem "Hanken Grotesk",sans-serif;color:var(--mute);margin-top:8px}
+@media(max-width:860px){.menu{grid-template-columns:1fr;gap:34px}.menu .side{position:static}}
+/* features */
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:40px;margin-top:56px}
+.feat div{border-top:2px solid var(--gold);padding-top:20px}
+.feat h3{font-size:1.45rem;margin-bottom:8px}.feat p{margin:0;color:var(--mute)}
+/* reviews */
+.rv{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.big{font:400 clamp(5rem,12vw,9rem)/.9 "Young Serif",serif;color:var(--g)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .big{color:#e4c37d}}
+.rv .meta{margin:12px 0 28px;color:var(--mute)}
+.q{margin:0;padding:30px 0;border-top:1px solid var(--line);font:400 1.45rem/1.4 "Young Serif",serif}
+.q:first-child{border-top:0;padding-top:0;font-size:2rem}
+@media(max-width:860px){.rv{grid-template-columns:1fr;gap:34px}}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:12px;margin-top:48px}
+.gal button{border:0;padding:0;cursor:zoom-in;background:var(--g2) center/cover;color:#e8e0c8;font:400 1.15rem/1.2 "Young Serif",serif;text-align:left;display:flex;align-items:flex-end;padding:16px;transition:filter .25s}
+.gal button:hover{filter:brightness(1.12)}
+.gal button:nth-child(1){grid-column:span 3;grid-row:span 2;background-color:var(--g)}
+.gal button:nth-child(2){grid-column:span 3;background-color:#7a5a2c}
+.gal button:nth-child(3){grid-column:span 3;background-color:#3b5a4d}
+.gal button:nth-child(4){grid-column:span 2;grid-row:span 2;background-color:#8a8468}
+.gal button:nth-child(5){grid-column:span 4;grid-row:span 2;background-color:#4f7a78}
+.gal span{background:rgba(14,26,22,.55);padding:3px 9px}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal button{grid-column:span 1!important;grid-row:span 1!important}.gal button:nth-child(1),.gal button:nth-child(5){grid-column:span 2!important}}
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,960px);width:100%}
+dialog::backdrop{background:rgba(8,16,13,.88)}
+#lbc{aspect-ratio:16/10;background:var(--g) center/cover;color:#e8e0c8;display:flex;align-items:flex-end;padding:26px;font:400 2rem "Young Serif",serif}
+#lbx{position:absolute;right:10px;top:10px}
+/* contact */
+.contact{background:var(--g);color:#f1ebdd}
+.contact .grid{display:grid;grid-template-columns:6fr 5fr;gap:80px;margin-top:50px}
+.addr{font:400 clamp(1.5rem,3vw,2.2rem)/1.25 "Young Serif",serif}
+.contact dl{margin:36px 0 0;display:grid;grid-template-columns:auto 1fr;gap:12px 28px;color:#cdd6cc}
+.contact dt{color:#e4c37d}.contact dd{margin:0}
+.contact .box{border:1px solid rgba(241,235,221,.25);padding:34px;align-self:start}
+.contact .box p{margin:0 0 22px;color:#cdd6cc}
+@media(max-width:860px){.contact .grid{grid-template-columns:1fr;gap:40px}}
+footer{background:#0f211c;color:#9fb0a6;padding:26px 0 calc(26px + env(safe-area-inset-bottom,0px));font-size:.9rem}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.river path{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+ <a class="logo" href="#inicio">Beira Rio</a>
+ <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
+ <nav id="nav" aria-label="Principal">
+  <a href="#inicio">Início</a><a href="#historia">Nossa história</a><a href="#cardapio">Cardápio</a><a href="#avaliacoes">Avaliações</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
+  <a class="btn fill go" href="#" target="_blank" rel="noopener">Como chegar</a>
+ </nav>
+</div></header>
+
+<main>
+<section class="hero" id="inicio" style="padding:0">
+ <svg class="river" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 150C200 40 380 40 560 120s360 90 560 10 260-80 360-40"/><path d="M-20 175C200 65 380 65 560 145s360 90 560 10 260-80 360-40"/></svg>
+ <div class="wrap top">
+  <h1>Sabor de verdade, pertinho do rio.</h1>
+  <div class="row">
+   <p>Comida saborosa, ambiente acolhedor e aquele gostinho de comida caseira que transforma uma refeição em um momento especial.</p>
+   <div class="cta"><a class="btn fill" href="#cardapio">Conheça nosso cardápio</a><a class="btn line go" href="#" target="_blank" rel="noopener">Como chegar</a></div>
+  </div>
+ </div>
+ <div class="wrap" style="width:100%"><div class="ledger">
+  <div><b>4,5 de 5</b>nota no Google</div><div><b>Mais de 150</b>avaliações</div><div><b>R$ 20 a R$ 40</b>por pessoa</div>
+ </div></div>
+</section>
+
+<section id="historia"><div class="wrap about">
+ <h2>Uma boa refeição tem sabor de casa.</h2>
+ <div>
+  <p>Mais do que uma refeição, queremos proporcionar momentos agradáveis à mesa. O Restaurante Beira Rio é uma opção para quem aprecia comida saborosa, atendimento atencioso e um ambiente acolhedor em Santo Amaro do Sul. Uma parada especial para aproveitar a região e desfrutar de uma boa comida.</p>
+  <div class="photo" id="aboutphoto" hidden></div>
+ </div>
+</div></section>
+
+<section class="bg" id="cardapio"><div class="wrap menu">
+ <div class="side">
+  <h2>Sabores que dão vontade de voltar.</h2>
+  <p>Os pratos do dia e os valores são informados diretamente pelo WhatsApp.</p>
+  <a class="btn fill wa" href="#" target="_blank" rel="noopener">Consulte as opções pelo WhatsApp</a>
+ </div>
+ <div>
+  <div id="dishes"></div>
+  <p class="said">Peixe frito, peixe assado, molho de mostarda, massa com camarão.<small>Especialidades citadas por clientes nas avaliações do Google. A disponibilidade pode variar de acordo com o dia.</small></p>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2>O que você encontra à mesa.</h2>
+ <div class="feat">
+  <div><h3>Sabor caseiro</h3><p>Refeições que valorizam o sabor e a simplicidade.</p></div>
+  <div><h3>Especialidade em peixes</h3><p>Destaque para os pratos com peixe mencionados nas avaliações.</p></div>
+  <div><h3>Ambiente acolhedor</h3><p>Um espaço para aproveitar uma boa refeição.</p></div>
+  <div><h3>Bom custo-benefício</h3><p>Faixa de preço entre R$ 20 e R$ 40 por pessoa.</p></div>
+ </div>
+</div></section>
+
+<section class="bg" id="avaliacoes"><div class="wrap rv">
+ <div>
+  <h2 style="margin-bottom:34px">Quem conhece, recomenda.</h2>
+  <div class="big">4,5</div>
+  <div class="meta">de 5 estrelas, com base em 152 avaliações no Google</div>
+  <a class="btn line" id="rvl" href="#" target="_blank" rel="noopener">Ver avaliações no Google</a>
+ </div>
+ <div>
+  <blockquote class="q">“Comida muito boa, com todo o sabor de comida caseira a preço justo e ambiente acolhedor.”</blockquote>
+  <blockquote class="q">“Comida super saborosa, com opções como peixe assado, peixe frito e acompanhamentos.”</blockquote>
+  <blockquote class="q">“Almoço muito saboroso, com peixe bem preparado.”</blockquote>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <h2>Um olhar sobre o Beira Rio.</h2>
+ <div class="gal" id="gal"></div>
+</div></section>
+
+<section class="contact" id="localizacao"><div class="wrap">
+ <h2 id="contato">Esperamos por você.</h2>
+ <div class="grid">
+  <div>
+   <div class="addr">Restaurante Beira Rio<br>R. Venâncio Aíres, 242–294<br>Santo Amaro do Sul, General Câmara — RS<br>CEP 95820-000</div>
+   <dl><dt>Telefone</dt><dd><a href="tel:+5551984834237">(51) 98483-4237</a></dd><dt>Preço médio</dt><dd>R$ 20–40 por pessoa</dd><dt>Serviços</dt><dd>Refeições no local e opção para viagem</dd></dl>
+  </div>
+  <div class="box"><p>Abra o endereço no Google Maps e siga a rota até o restaurante.</p>
+   <div class="cta"><a class="btn fill go" href="#" target="_blank" rel="noopener">Traçar rota</a><a class="btn line wa" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a></div></div>
+ </div>
+</div></section>
+</main>
+<footer><div class="wrap">© Restaurante Beira Rio — Santo Amaro do Sul, General Câmara — RS</div></footer>
+
+<dialog id="lb"><button class="btn fill" id="lbx">Fechar</button><div id="lbc"></div></dialog>
+
+<script>
+/* ===== CONTEÚDO EDITÁVEL =====
+   Fotos são opcionais: preencha "img" (ex.: "peixe.jpg") e ela aparece no lugar do bloco de cor.
+   Novos pratos: acrescente itens em DISHES (price e img opcionais). */
+var PHOTOS={hero:"",about:""};
+var DISHES=[
+ {t:"Peixes e frutos do mar",d:"Pratos com peixe, citados pelos clientes nas avaliações."},
+ {t:"Comida caseira",d:"Refeições com tempero e simplicidade de casa."},
+ {t:"Buffet e acompanhamentos",d:"Variedade para montar o prato do jeito que você gosta."},
+ {t:"Saladas e acompanhamentos",d:"Opções variadas para completar a refeição."}
+];
+var GALLERY=[{t:"Pratos de peixe"},{t:"Comida caseira e buffet"},{t:"Saladas e acompanhamentos"},{t:"Ambiente do restaurante"},{t:"Paisagem do rio e da região"}];
+var ADDR="R. Venâncio Aíres, 242, Santo Amaro do Sul, General Câmara, RS, 95820-000";
+var DIR="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(ADDR);
+var WA="https://wa.me/5551984834237?text="+encodeURIComponent("Olá! Gostaria de saber as opções de hoje no Restaurante Beira Rio.");
+document.getElementById("rvl").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent("Restaurante Beira Rio "+ADDR);
+[].forEach.call(document.querySelectorAll(".go"),function(a){a.href=DIR});
+[].forEach.call(document.querySelectorAll(".wa"),function(a){a.href=WA});
+if(PHOTOS.hero){var h=document.getElementById("inicio");h.style.backgroundImage="url('"+PHOTOS.hero+"')";h.classList.add("img")}
+if(PHOTOS.about){var p=document.getElementById("aboutphoto");p.style.backgroundImage="url('"+PHOTOS.about+"')";p.hidden=false}
+document.getElementById("dishes").innerHTML=DISHES.map(function(x){
+ return '<article class="item"><h3>'+x.t+'</h3>'+(x.price?'<span class="pr">'+x.price+'</span>':'')+'<p>'+x.d+'</p>'+(x.img?'<img loading="lazy" src="'+x.img+'" alt="'+x.t+'">':'')+'</article>'}).join("");
+var gal=document.getElementById("gal");
+gal.innerHTML=GALLERY.map(function(x,i){return '<button data-i="'+i+'"'+(x.img?' style="background-image:url(\''+x.img+'\')"':'')+' aria-label="Ampliar: '+x.t+'">'+(x.img?'':'<span>'+x.t+'</span>')+'</button>'}).join("");
+var lb=document.getElementById("lb"),lbc=document.getElementById("lbc");
+gal.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var x=GALLERY[b.dataset.i];
+ lbc.style.backgroundImage=x.img?"url('"+x.img+"')":"";lbc.textContent=x.img?"":x.t;lb.showModal()});
+document.getElementById("lbx").onclick=function(){lb.close()};
+lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+var nav=document.getElementById("nav"),bg=document.getElementById("burger");
+bg.onclick=function(){var o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
+nav.addEventListener("click",function(e){if(e.target.tagName==="A"){nav.classList.remove("open");bg.setAttribute("aria-expanded","false")}});
+</script>
+</body>
+</html>
